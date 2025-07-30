@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tienda de Suplementos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero {
+      background-image: url('/static/img/hero.jpg');
+
+      background-size: cover; /* llena todo sin bordes */
+      background-repeat: no-repeat;
+      background-position: center center; /* muestra la cabeza */
+      background-color: #000; /* relleno en caso no cargue imagen */
+
+      height: 80vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .categoria-img {
+      height: 250px;
+      object-fit: contain; /*Imagen completa, puede dejar bordes*/
+      object-position: center; /* Centra la imagen */
+      border-radius: 8px;      /* Opcional: bordes redondeados */
+    }
+    .banner {
+      background-color: #01181b;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }  
+
+    .swiper {
+      width: 100%;
+      height: 80vh;
+     }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Muestra toda la imagen adaptada */
+    }
+
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1, .hero-text p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  animation: fadeInDown 1s ease-out;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text-bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* opcional */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-text-top {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* opcional */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #f8f3f3; /* gris claro recomendado */
+  color: #333; /* texto gris oscuro */
+}
+
+
+  </style>
+
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#" style="
+      font-size: 2rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.3);">
+      REGO SALUD
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- HERO 
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Potencia tu rendimiento</h1>
+      <p class="lead">Suplementos de calidad para tus objetivos</p>
+      <a href="#" class="btn btn-warning btn-lg">Ver catálogo</a>
+    </div>
+  </section>
+  -->
+
+  <!-- Slider principal -->
+<div class="swiper hero-slider">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="slide-content">
+        <img src="/static/img/ozono2.png" alt="Slide 1">
+        <div class="hero-text">
+          <!-- <h1 class="display-4 fw-bold">Maximiza tu Vitalidad con Ozonoterapia</h1>-->
+          <!--<p class="lead">Suplementos de calidad para tus objetivos</p>-->
+          <!--<p class="lead">Maximiza tu Vitalidad con Ozonoterapia</p>-->
+          <a href="https://wa.me/51987654321" class="btn btn-success btn-lg" target="_blank">
+          Contáctanos por WhatsApp
+          </a>
+
+          <!--<a href="#" class="btn btn-warning btn-lg">Ver catálogo</a>-->
+        </div>
+      </div>
+    </div>
+   
+ <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="slide-content">
+        <img src="/static/img/suplementos2_4.png" alt="Slide 2">
+        <div class="hero-text-bottom">
+          <!--<h1 class="display-4 fw-bold">Energía sin límites</h1>
+          <p class="lead">Pre-entrenos de alto rendimiento</p>
+          <a href="#" class="btn btn-warning btn-lg">Explorar</a>-->
+          <a href="https://wa.me/51987654321" class="btn btn-success btn-lg" target="_blank">
+          Contáctanos por WhatsApp
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+   <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="slide-content">
+        <img src="/static/img/transforma5.png" alt="Slide 3">
+        <div class="hero-text-top">
+          <!--<h1 class="display-4 fw-bold">Energía sin límites</h1>
+          <p class="lead">Pre-entrenos de alto rendimiento</p>
+          <a href="#" class="btn btn-warning btn-lg">Explorar</a>-->
+          <a href="https://wa.me/51987654321" class="btn btn-success btn-lg" target="_blank">
+          Contáctanos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Controles -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+
+  <!-- CATEGORÍAS -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestras Categorías</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <img src="/static/img/proteinas.jpg" class="card-img-top categoria-img" alt="Proteínas">
+            <div class="card-body text-center">
+              <h5 class="card-title">Proteínas</h5>
+              <a href="#" class="btn btn-outline-dark btn-sm">Ver productos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <img src="/static/img/quemadores.jpg" class="card-img-top categoria-img" alt="Quemadores">
+            <div class="card-body text-center">
+              <h5 class="card-title">Quemadores</h5>
+              <a href="#" class="btn btn-outline-dark btn-sm">Ver productos</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <img src="/static/img/preentrenos.jpg" class="card-img-top categoria-img" alt="Pre-entrenos">
+            <div class="card-body text-center">
+              <h5 class="card-title">Pre-entrenos</h5>
+              <a href="#" class="btn btn-outline-dark btn-sm">Ver productos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Lo que dicen nuestros clientes</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">"Excelente servicio y productos auténticos. ¡Recomiendo al 100%!"</p>
+            <footer class="blockquote-footer">Carlos Jiménez</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">"La atención fue rápida y los envíos llegaron en perfecto estado."</p>
+            <footer class="blockquote-footer">María López</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">"Productos originales, buena asesoría, definitivamente volveré a comprar."</p>
+            <footer class="blockquote-footer">Luis Pérez</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER FINAL -->
+  <section class="banner">
+    <div class="container">
+      <h2>¡Compra con confianza!</h2>
+      <p>Productos 100% originales. Envíos a todo el país.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="bg-dark text-white py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Contacto</h5>
+        <p>Teléfono: <a href="tel:+51999999999" class="text-white">+51 999 999 999</a></p>
+        <p>Email: <a href="mailto:info@suplementospro.com" class="text-white">info@suplementospro.com</a></p>
+        <p>Dirección: Lima, Perú</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <h5>Síguenos</h5>
+        <a href="https://wa.me/51999999999" target="_blank" class="btn btn-success">
+          <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+      </div>
+    </div>
+    <hr class="border-light">
+    <p class="text-center mb-0">© 2025 Suplementos Pro. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  <!-- JS de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Inicializar Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.hero-slider', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+
+
+
+</body>
+</html>
